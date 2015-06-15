@@ -7,7 +7,7 @@
 <div class="row">
   <div class="col-sm-4">
     <ul class="list-unstyled">
-      {{#each model as |post|}}
+      {{#each sortedPosts as |post|}}
         <li>
           {{#link-to 'post' post.id}}
             {{post.title}}
@@ -19,6 +19,7 @@
         </li>
       {{/each}}
     </ul>
+    <button {{action 'sortByRating'}}>Sort By Rating</button>
 </div>
   <div class="col-sm-8">
     {{outlet}}
@@ -27,3 +28,19 @@
 <!-- <a href="#" {{action 'sortByTitle'}}>Sort By Title</a>
 
 <p>{{#link-to 'new-post' classNames="btn btn-danger"}}Add a Post{{/link-to}}</p> -->
+Add Post
+<div>
+  Title
+  {{input type="text" value=title}}
+</div>
+
+<div>
+  Body
+  {{textarea value=body}}
+</div>
+
+<div>
+  Author Name
+  {{input value=name}}
+</div>
+<button {{action 'add'}}>Add Post</button>

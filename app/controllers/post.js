@@ -11,10 +11,9 @@ var PostController = {
     },
     upvote: function(){
       var model = this.get('model.rating');
-      this.set('rating', model + 1);
-      console.log(model);
+      this.set('model.rating', model + 1);
     }
   }
 };
 
-export default Ember.ObjectController.extend(PostController);
+export default Ember.Controller.extend(PostController);
