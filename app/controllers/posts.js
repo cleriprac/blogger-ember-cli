@@ -11,6 +11,14 @@ var PostsController = {
 
       this.set('sortProperties', ['rating:desc']);
     },
+    sortByTitle: function() {
+
+      this.set('sortProperties', ['title:asc']);
+    },
+    sortByAuthor: function() {
+
+      this.set('sortProperties', ['author.name:desc']);
+    },
     add: function(){
         newId += 1;
 
