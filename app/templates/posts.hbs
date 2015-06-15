@@ -1,26 +1,27 @@
 <div class="row">
   <div class="col-sm-12">
-<h1>Dracula's Blog</h1>
+    <h1>Dracula's Blog</h1>
+  </div>
 </div>
-</div>
+
 <div class="row">
-  <div class="col-sm-6">
-<ul class="list-unstyled">
-  {{#each model as |post|}}
-    <li>
-      {{#link-to 'post' post.id}}
-        {{post.title}}
-          <span class="muted">
-            by {{post.author.name}}
-          </span>
-      {{/link-to}}
-    </li>
-  {{/each}}
-</ul>
+  <div class="col-sm-4">
+    <ul class="list-unstyled">
+      {{#each model as |post|}}
+        <li>
+          {{#link-to 'post' post.id}}
+            {{post.title}}
+            <span class="muted">
+              by {{post.author.name}}
+            </span>
+          {{/link-to}}
+        </li>
+      {{/each}}
+    </ul>
 </div>
-<div class="col-sm-6">
-{{outlet}}
-</div>
+  <div class="col-sm-8">
+    {{outlet}}
+  </div>
 </div>
 <!-- <a href="#" {{action 'sortByTitle'}}>Sort By Title</a>
 
