@@ -21,9 +21,9 @@ if (!Array.prototype.find) {
   };
 }
 var posts = [
-  {id: 1, title: 'I love blood!', author: 1, body: "Blood is delicious."},
-  {id: 2, title: 'Give me your blood', author: 1, body: "I need some blood."},
-  {id: 3, title: 'Seriously, I am so hungry!', author: 2, body: "I am hungry."}
+  {id: 1, title: 'I love blood!', author: 1, body: "Blood is delicious.", rating: 0},
+  {id: 2, title: 'Give me your blood', author: 1, body: "I need some blood.", rating: 0},
+  {id: 3, title: 'Seriously, I am so hungry!', author: 2, body: "I am hungry.", rating: 0}
 ]
 
 var authors = [

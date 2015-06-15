@@ -6,5 +6,5 @@ export default DS.Model.extend({
   author: DS.belongsTo('author'),
   title: attr('string'),
   body: attr('string'),
-  // date: attr('date')
+  rating: attr('number')
 });
